@@ -6,4 +6,4 @@ authors = ["pigfromchina <fedora-opensuse@outlook.com>"]
 [dependencies]
 winapi = "*"
 regex = "*"
-uuid = "0.5"
+uuid = { version = "*" , features = [ "v4" ] }

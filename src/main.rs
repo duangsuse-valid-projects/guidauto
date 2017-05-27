@@ -18,7 +18,7 @@
 //
 
 extern crate regex;
-extern crate uuid;
+
 mod utils;
 
 use std::io;
@@ -32,20 +32,20 @@ use utils::winpaste;
 
 fn main() {
     match File::open("Database.xml") {
-        Ok(mut f) => { 
+        Ok(mut f) => {
             let mut buf = String::new();
-            let f = f.read_to_string(&mut  buf)
+            let f = f.read_to_string(&mut buf)
                 .expect("[e] 无法将dbxml读取到字符串...");
             freshdbxml(&mut buf);
-        },
+        }
         Err(e) => {
             println!("[-] 在当前目录未找到数据库文件，尝试写入剪贴板...");
             //然而
             println!("[-] 剪贴板功能未实现，将写入标准输出...");
-            println!("{}",getguid());
-        },
+            println!("{}", getguid());
+        }
     }
 }
-fn freshdbxml(mut dbxml:&mut String) -> () {
-    println!("{}",dbxml);
+fn freshdbxml(mut dbxml: &mut String) -> () {
+    println!("{}", dbxml);
 }
