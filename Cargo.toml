@@ -1,0 +1,9 @@
+[package]
+name = "guidauto"
+version = "0.1.0"
+authors = ["pigfromchina <fedora-opensuse@outlook.com>"]
+
+[dependencies]
+winapi = "*"
+regex = "*"
+uuid = "0.5"
